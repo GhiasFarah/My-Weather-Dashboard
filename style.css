@@ -1,1 +1,12 @@
- /* CSS code will go here */
+.card {
+    border-radius: 20px;
+   
+}
+
+.current {
+    margin-left: 50px;
+}
+
+form{
+    margin-left: -50px;
+}
