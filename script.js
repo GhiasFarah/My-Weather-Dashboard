@@ -3,14 +3,14 @@ search.click(() => getW())
 function getW() {
   var key = '00dd1f2a91c0e098f75c349e9fcdb0bd';
   var city = $('.city').val()
-  var url1 = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`
+  var url1 = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`
   fetch(url1)
     .then((res) => res.json())
     .then((d) => {
       console.log(d)
       $('#temp0').text(`Temp: ${d.main.temp}`)
 
-      var url2 = `http://api.openweathermap.org/data/2.5/onecall?lat=${d.coord.lat}&lon=${d.coord.lon}&appid=${key}&units=imperial`
+      var url2 = `https://api.openweathermap.org/data/2.5/onecall?lat=${d.coord.lat}&lon=${d.coord.lon}&appid=${key}&units=imperial`
       fetch(url2)
         .then((res2) => res2.json())
         .then((d1) => {
